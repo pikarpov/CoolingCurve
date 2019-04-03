@@ -58,7 +58,7 @@ class CoolingCurve:
             vals = np.moveaxis(np.genfromtxt(ion_filename, skip_header=n), -1,0)
             
             #import CIE ionization fractions for each ion of the looped element
-            abund = np.moveaxis(np.genfromtxt(r'Bryans2008/%s.csv'%elements[i], delimiter=',', skip_header=1), -1,0)
+            abund = np.moveaxis(np.genfromtxt(r'IonFraction/%s.csv'%elements[i], delimiter=',', skip_header=1), -1,0)
 
             #convert from log format
             abund[0] = [10**j for j in abund[0]]
